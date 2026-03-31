@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>MuMessage</PackageId>
-    <Version>1.0.0</Version> <Authors>Luca Farias</Authors>
+    <Version>1.0.2</Version> <Authors>Luca Farias</Authors>
     <Description>Fast, FIFO-guaranteed, and thread-safe messaging engine for .NET 9.</Description>
     <PackageTags>messaging;messenger;fifo;async;net9</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

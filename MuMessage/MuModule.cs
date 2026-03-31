@@ -7,15 +7,11 @@ public class MuModule : NinjectModule
 {
     public override void Load()
     {
-        // Lega ILogManager alla tua implementazione (es. MyLogManager)
-        // Supponiamo che il tuo LogManager sia già inizializzato altrove o lo inizializzi qui
+        // 1. DEVI scommentare questo. Ninject deve sapere come creare ILogManager
+        // per poterlo passare al costruttore di MessageEngine
         Bind<ILogManager>().To<LogManager>().InSingletonScope();
 
-        // Lega MessageEngine in Singleton Scope
+        // 2. Lega MessageEngine
         Bind<MessageEngine>().ToSelf().InSingletonScope();
-
-        // Opzionale: Sincronizza il Singleton statico con quello di Ninject
-        var engine = Kernel.Get<MessageEngine>();
-        MessageEngine.SetupDefault(engine);
     }
 }
